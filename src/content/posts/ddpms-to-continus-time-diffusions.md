@@ -7,8 +7,8 @@ authors:
   - name: Chen Pinghong
   - name: Huang Zifeng
     link: https://github.com/Kowyo
-  - name: Leo
-  - name: easymoneysniper
+  - name: Rui Shuzhe
+  - name: Wang Xiao
 repo: https://github.com/AaronCaoZJ/julia-diffusion
 ---
 

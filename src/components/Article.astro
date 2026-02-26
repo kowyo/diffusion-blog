@@ -81,6 +81,12 @@ const formattedDate = date.toLocaleDateString("en-US", {
     margin-bottom: 1.5rem; /* Reduced from 2rem */
   }
 
+  @media (max-width: 640px) {
+    .article-header :global(h1) {
+      font-size: 1.25rem;
+    }
+  }
+
   .article-meta {
     font-family: var(--font-body);
     font-size: 0.875rem;
