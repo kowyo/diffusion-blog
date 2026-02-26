@@ -3,7 +3,7 @@ title: "Diffusion models, from DDPMs to continuous time diffusion"
 date: 2026-02-26
 authors:
   - name: Aaron Cao
-    link: https://sites.google.com/view/caozhijun/home/
+    link: https://github.com/AaronCaoZJ
   - name: Chen Pinghong
   - name: Huang Zifeng
     link: https://github.com/Kowyo
