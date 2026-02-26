@@ -25,6 +25,18 @@ Calm software acknowledges this. It does its job and gets out of the way. It doe
 
 These are not features. They are qualities. You cannot put them in a changelog, but you feel their absence immediately.
 
+## Mathematical Foundation
+
+Diffusion models are based on the concept of slowly adding noise to data and then learning to reverse that process.
+
+The forward diffusion process $q(x_t | x_{t-1})$ is defined as:
+
+$$
+q(x_t | x_{t-1}) = \mathcal{N}(x_t; \sqrt{1 - \beta_t} x_{t-1}, \beta_t \mathbf{I})
+$$
+
+Where $\beta_t$ is the noise schedule.
+
 ## Why this matters
 
 The tools we use shape how we think. Frantic tools produce frantic work. Calm tools create space for focus.

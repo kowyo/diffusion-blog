@@ -8,8 +8,11 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "astro": "^5.0.0",
-    "@astrojs/mdx": "^4.0.0",
-    "@astrojs/rss": "^4.0.0"
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/rss": "^4.0.15",
+    "astro": "^5.18.0",
+    "katex": "^0.16.33",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0"
   }
 }
