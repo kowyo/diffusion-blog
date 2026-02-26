@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 }
 
 const post = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 
 const postUrl = new URL(`/posts/${post.id}`, Astro.site).href;
 
@@ -49,6 +49,7 @@ const jsonLd = {
     description={post.data.description}
     authors={post.data.authors}
     repo={post.data.repo}
+    headings={headings}
   >
     <Content />
   </Article>

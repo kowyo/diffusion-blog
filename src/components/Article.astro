@@ -1,6 +1,7 @@
 ---
 import Heading from "./Heading.astro";
 import Prose from "./Prose.astro";
+import TableOfContents from "./TableOfContents.astro";
 
 interface Props {
   title: string;
@@ -8,9 +9,10 @@ interface Props {
   description?: string;
   authors?: string | { name: string; link?: string; image?: string }[];
   repo?: string;
+  headings?: { depth: number; slug: string; text: string }[];
 }
 
-const { title, date, description, authors, repo } = Astro.props;
+const { title, date, description, authors, repo, headings } = Astro.props;
 
 const formattedDate = date.toLocaleDateString("en-US", {
   year: "numeric",
@@ -66,19 +68,23 @@ const formattedDate = date.toLocaleDateString("en-US", {
       }
     </div>
   </header>
-  <Prose>
-    <slot />
-  </Prose>
+
+  <div class="article-body">
+    <Prose>
+      <slot />
+    </Prose>
+  </div>
+
+  {headings && headings.length > 0 && <TableOfContents headings={headings} />}
 </article>
 
 <style>
   .article {
-    max-width: var(--width-page);
-    margin: var(--space-lg) auto var(--space-2xl);
+    margin: var(--space-lg) 0 var(--space-2xl);
   }
 
   .article-header {
-    margin-bottom: 1.5rem; /* Reduced from 2rem */
+    margin-bottom: 1.5rem;
   }
 
   @media (max-width: 640px) {
@@ -159,6 +165,12 @@ const formattedDate = date.toLocaleDateString("en-US", {
     flex-shrink: 0;
     display: block;
     margin-bottom: 0.1em;
+  }
+
+  @media print {
+    .print-btn {
+      display: none;
+    }
   }
 
   .print-btn {
