@@ -6,7 +6,7 @@ import rehypeKatex from "rehype-katex";
 import cloudflare from "@astrojs/cloudflare";
 
 export default defineConfig({
-  site: "https://uinuxblog.getuinux.com",
+  site: "https://diffusion.kowyo.workers.dev",
 
   integrations: [
     mdx({
