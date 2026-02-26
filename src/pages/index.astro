@@ -1,6 +1,5 @@
 ---
 import Layout from "../components/Layout.astro";
-import Heading from "../components/Heading.astro";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("posts")).sort(
@@ -8,19 +7,15 @@ const posts = (await getCollection("posts")).sort(
 );
 ---
 
-<Layout title="UINUX Blog">
+<Layout title="EE5311 Group 7">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "UINUX Blog",
+    "name": "EE5311 Group 7",
     "description": "Writing about systems, design, and building with restraint.",
     "url": Astro.site?.href,
   })} />
   <section class="home">
-    <header class="home-header">
-      <Heading as="h1">UINUX Blog</Heading>
-      <p class="home-tagline">Writing about systems, design, and building with restraint.</p>
-    </header>
     <ul class="post-list">
       {
         posts.map((post) => {
@@ -45,17 +40,6 @@ const posts = (await getCollection("posts")).sort(
 </Layout>
 
 <style>
-  .home-header {
-    margin-bottom: var(--space-2xl);
-  }
-
-  .home-tagline {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--color-text-secondary);
-    margin-top: var(--space-sm);
-  }
-
   .post-list {
     list-style: none;
     padding: 0;
@@ -63,10 +47,6 @@ const posts = (await getCollection("posts")).sort(
 
   .post-item {
     border-bottom: 1px solid var(--color-border);
-  }
-
-  .post-item:first-child {
-    border-top: 1px solid var(--color-border);
   }
 
   .post-item a {
