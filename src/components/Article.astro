@@ -96,14 +96,11 @@ const formattedDate = date.toLocaleDateString("en-US", {
   .article-meta {
     font-family: var(--font-body);
     font-size: 0.875rem;
+    line-height: 1.5;
     color: var(--color-text);
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-  }
-
-  .article-authors {
-    margin-top: 0.125rem;
   }
 
   .author-list {
@@ -112,7 +109,8 @@ const formattedDate = date.toLocaleDateString("en-US", {
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    column-gap: 0.75rem;
+    row-gap: 0;
     align-items: center;
   }
 
@@ -151,6 +149,7 @@ const formattedDate = date.toLocaleDateString("en-US", {
     font-weight: 500;
     display: inline-flex;
     align-items: center;
+    line-height: inherit;
     gap: 0.375rem;
     width: fit-content;
   }
